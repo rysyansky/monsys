@@ -31,9 +31,11 @@ void broadcast_loop(WebsocketManager& ws_manager) {
 int main(int argc, char* argv[]) {
     cxxopts::Options options("app", "HTTP Server");
 
+    #ifdef ENABLE_RELEASE_PORTS
     options.add_options()
         ("p,port", "Port",
          cxxopts::value<int>()->default_value("8080"));
+    #endif
     options.add_options()
         ("h,help", "Print help");
     options.add_options()
@@ -46,7 +48,13 @@ int main(int argc, char* argv[]) {
         std::cout << options.help() << std::endl;
         return 0;
     }
+
+    #ifdef ENABLE_RELEASE_PORTS
     int port = result["port"].as<int>();
+    #else
+    int port = 8080;
+    #endif
+
     if(result["debug"].as<bool>()) {
         crow::logger::setLogLevel(crow::LogLevel::Debug);
     }
