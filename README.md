@@ -45,6 +45,13 @@ sudo apt install -y build-essential cmake git curl python3 unzip
 sudo apt install -y nodejs npm
 ```
 
+Clone this repo to your machine:
+
+```bash
+git clone https://github.com/rysyansky/monsys.git
+cd monsys
+```
+
 For `vcpkg` (backend dependency manager):
 
 ```bash
@@ -166,6 +173,12 @@ sudo apt install -y build-essential cmake git curl python3 unzip
 
 # Node.js
 sudo apt install -y nodejs npm
+```
+
+Склонируйте этот репозиторий к себе на компьютер:
+```bash
+git clone https://github.com/rysyansky/monsys.git
+cd monsys
 ```
 
 Для `vcpkg` (менеджер зависимостей бэка):
