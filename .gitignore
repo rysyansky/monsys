@@ -1,6 +1,5 @@
 backend/build/
 monsys/
-vcpkg/
 
 frontend/node_modules/
 frontend/dist/
