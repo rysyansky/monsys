@@ -11,8 +11,8 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Dependencies installation (Ubuntu)](#dependencies-installation-ubuntu)
-- [Release build (script + run from `monsys`)](#release-build)
-- [Debug build (CMake backend, `npm run dev`, two terminals)](#debug-build)
+- [Release build](#release-build)
+- [Debug build](#debug-build)
 - [Run and usage](#usage)
 - [Launch flags](#launch-flags)
 
@@ -134,8 +134,8 @@ Examples:
 - [Описание](#описание)
 - [Технологии (Backend / Frontend)](#технологии)
 - [Установка зависимостей (Ubuntu)](#установка-зависимостей-ubuntu)
-- [Release сборка (скрипт + запуск из `monsys`)](#release-сборка)
-- [Debug сборка (cmake в бэке, `npm run dev`, запуск в 2 терминала)](#debug-сборка)
+- [Release сборка](#release-сборка)
+- [Debug сборка](#debug-сборка)
 - [Запуск и использование](#запуск-и-использование)
 - [Флаги запуска](#флаги-запуска)
 
