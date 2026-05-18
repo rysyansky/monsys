@@ -28,7 +28,6 @@ target_sources(app PRIVATE
     src/server/routes.cpp
     
     src/StatCollector.cpp
-    src/main.cpp
     src/Calculators.cpp
 )
 
@@ -40,4 +39,5 @@ target_link_libraries(app PRIVATE
 
 target_compile_definitions(app PRIVATE
     $<$<CONFIG:Debug>:ENABLE_DEBUG_ROUTES>
+    $<$<CONFIG:Release>:ENABLE_RELEASE_PORTS>
 )
