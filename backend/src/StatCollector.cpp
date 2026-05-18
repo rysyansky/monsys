@@ -144,13 +144,7 @@ std::optional<SystemData> StatCollector::GetSystemData() {
         data.processes_data[meta.pid] = delta;
     }
 
-    CROW_LOG_DEBUG << std::format(
-        "cores={} disks={} net={} proc_data={}",
-        data.cpu_cores.size(),
-        data.disks.size(),
-        data.network.size(),
-        data.processes_data.size()
-    );
+    CROW_LOG_DEBUG << "cores=" << data.cpu_cores.size() << " disks=" << data.disks.size() << " net=" << data.network.size() << " proc_data=" << data.processes_data.size();
 
     return data;
 }
