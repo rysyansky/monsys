@@ -48,8 +48,10 @@ sudo apt install -y nodejs npm
 Clone this repo to your machine:
 
 ```bash
-git clone https://github.com/rysyansky/monsys.git
+git clone --recurse-submodules https://github.com/rysyansky/monsys.git
 cd monsys
+# if you forgot to include --recurse-submodules you can initialize download:
+# git submodule update --init
 ```
 
 For `vcpkg` (backend dependency manager):
@@ -177,8 +179,10 @@ sudo apt install -y nodejs npm
 
 Склонируйте этот репозиторий к себе на компьютер:
 ```bash
-git clone https://github.com/rysyansky/monsys.git
+git clone --recurse-submodules https://github.com/rysyansky/monsys.git
 cd monsys
+# если вы забыли указать --recurse-submodules, вы можете инициализировать загрузку:
+# git submodule update --init
 ```
 
 Для `vcpkg` (менеджер зависимостей бэка):
