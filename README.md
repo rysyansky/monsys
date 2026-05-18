@@ -39,10 +39,11 @@ Open a terminal and run:
 ```bash
 # System packages
 sudo apt update
-sudo apt install -y build-essential cmake git curl python3 unzip
+sudo apt install -y build-essential cmake git curl python3 unzip clang pkg-config
 
 # Install Node.js
-sudo apt install -y nodejs npm
+curl -fsSL https://deb.nodesource.com/setup_26.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 Clone this repo to your machine:
@@ -118,7 +119,7 @@ The frontend connects to the backend WebSocket endpoint at `ws://localhost:8080/
 
 The backend executable accepts the following command-line options (use `--help` to list them):
 
-- `-p, --port <number>` - set HTTP/WebSocket listening port (default: `8080`).
+- `-p, --port <number>` - set HTTP/WebSocket listening port (default: `8080`). # available only on release build
 - `-d, --debug` - enable debug logging output (flag; default: off).
 - `-h, --help` - print help and exit.
 
@@ -169,13 +170,14 @@ Examples:
 ```bash
 # Системные пакеты
 sudo apt update
-sudo apt install -y build-essential cmake git curl python3 unzip
+sudo apt install -y build-essential cmake git curl python3 unzip clang pkg-config
 
 # Node.js
 sudo apt install -y nodejs npm
 ```
 
 Склонируйте этот репозиторий к себе на компьютер:
+
 ```bash
 git clone https://github.com/rysyansky/monsys.git
 cd monsys
@@ -239,7 +241,7 @@ npm run dev
 
 Исполняемы файл запуска бэкенда поддерживает данные флаги (используйте `--help` чтобы вывести их):
 
-- `-p, --port <number>` - установить порт HTTP/WebSocket (по умолчанию: `8080`).
+- `-p, --port <number>` - установить порт HTTP/WebSocket (по умолчанию: `8080`). # доступно только в релизной версии
 - `-d, --debug` - показывать отладочный вывод (по умолчанию выключен).
 - `-h, --help` - вывести эти флаги и завершить программу.
 
