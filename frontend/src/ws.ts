@@ -6,7 +6,11 @@ import type {
 
 export let latestPayload: MetricsPayload | null = null;
 
-const ws = new WebSocket("ws://localhost:8080/ws");
+const wsUrl = import.meta.env.PROD
+  ? new URL("/ws", window.location.origin).toString()
+  : "ws://localhost:8080/ws";
+
+const ws = new WebSocket(wsUrl);
 
 ws.onopen = () => {
   console.log("ws connected");
