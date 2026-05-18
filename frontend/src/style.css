@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: sans-serif;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 20vw;
+  min-width: 0;
+  background: #181818;
+  padding: 12px;
+  overflow-y: auto;
+  border-right: 1px solid #333;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  overflow: auto;
+}
+
+.card {
+  background: #202020;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.cpu-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+
+.toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.toolbar-label {
+  color: #bbb;
+  white-space: nowrap;
+}
+
+select,
+#table-filter {
+  background: #111;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+#table-filter {
+  min-width: 240px;
+}
+
+#toggles {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  padding: 6px 10px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #0084ff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+th {
+  text-align: center;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+td.cell {
+  width: 1%;
+  white-space: nowrap;
+}
+
+td.cell--string {
+  text-align: left;
+}
+
+td.cell--numeric {
+  text-align: right;
+}
+
+tr:hover {
+  background: #222;
+}
+
+.io-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.lamp {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.lamp.active {
+  opacity: 1;
+}
+
+.read {
+  background: #00ff66;
+}
+
+.write {
+  background: #ff8800;
+}

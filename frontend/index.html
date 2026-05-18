@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitor</title>
+  <script type="module" src="./src/main.ts"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <aside class="sidebar">
+
+      <section class="card">
+        <h3>CPU</h3>
+
+        <div class="cpu-controls">
+          <select id="cpu-mode">
+            <option value="total_usage">Total</option>
+            <option value="user_usage">User</option>
+            <option value="system_usage">System</option>
+            <option value="idle_usage">Idle</option>
+          </select>
+
+          <select id="cpu-core"></select>
+        </div>
+
+        <div id="cpu-value">0.00%</div>
+      </section>
+
+      <section class="card">
+        <h3>Disk</h3>
+
+        <select id="disk-select"></select>
+
+        <div id="disk-util"></div>
+
+        <div class="io-row">
+          <div class="lamp read"></div>
+          <span id="disk-read"></span>
+        </div>
+
+        <div class="io-row">
+          <div class="lamp write"></div>
+          <span id="disk-write"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Memory / Swap</h3>
+
+        <div id="memory-used"></div>
+        <div id="swap-used"></div>
+      </section>
+
+      <section class="card">
+        <h3>Network</h3>
+
+        <select id="net-select"></select>
+
+        <div id="net-rx"></div>
+        <div id="net-tx"></div>
+      </section>
+
+      <section class="card">
+        <h3>Uptime</h3>
+
+        <div id="uptime"></div>
+      </section>
+
+    </aside>
+
+    <main class="content">
+
+      <div class="toolbar">
+        <div id="toggles"></div>
+
+        <div class="toolbar-controls">
+          <label class="toolbar-label" for="sort-select">Сортировать по</label>
+          <select id="sort-select"></select>
+
+          <label class="toolbar-label" for="table-filter">Фильтр</label>
+          <input id="table-filter" type="text" placeholder="PID, name" />
+        </div>
+      </div>
+
+      <table id="process-table">
+        <thead>
+          <tr id="table-head"></tr>
+        </thead>
+
+        <tbody id="table-body"></tbody>
+      </table>
+
+    </main>
+
+  </div>
+</body>
+</html>
