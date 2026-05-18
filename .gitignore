@@ -14,3 +14,4 @@ frontend/dist/
 *.log
 
 .cache/
+compile_commands.json
